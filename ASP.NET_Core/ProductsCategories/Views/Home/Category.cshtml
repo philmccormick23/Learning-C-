@@ -1,0 +1,25 @@
+@using ProductsCategories.Models
+@model Category
+
+<h1>New Categories</h1>
+<h2> Enter new category here. </h2>
+
+<form asp-controller="Home" asp-action="newCategory" method="POST">
+    <span asp-validation-for="CategoryName"></span>
+    <label asp-for="CategoryName"> Name: </label>
+    <input asp-for="CategoryName"><br><br>
+    <input type="submit" value="Add New Category">
+</form>
+
+    <p> <button> <a href= "/"> Go to Homepage </a> </button> </p>
+
+
+<h3>Here are the categories: </h3>
+@foreach (var category in @ViewBag.categories) {
+    <a href='/category/@category.CategoryId'>@category.CategoryName</a>
+}
+
+@if (ViewBag.message != null)
+{
+    <p>@ViewBag.message</p>
+}

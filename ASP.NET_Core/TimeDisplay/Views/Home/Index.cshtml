@@ -1,0 +1,6 @@
+<h1>Time Display</h1>
+    @{ DateTime CurrentTime = DateTime.Now; }
+        <div>
+            <h3>Date: @CurrentTime.ToString("MMM d, yyy")</h3>
+            <h3>Time: @CurrentTime.ToString("h:mm tt")</h3>
+        </div>

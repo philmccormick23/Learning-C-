@@ -1,0 +1,54 @@
+@using ProductsCategories.Models
+@model Association
+
+
+
+
+<h1> Show for one product page </h1>
+
+
+
+
+<p> This product name is: @ViewBag.prodinfo.ProductName</p>
+<p> The price is: @ViewBag.prodinfo.ProductPrice </p>
+<p> Description: @ViewBag.prodinfo.ProductDescription </p>
+
+
+@foreach(var item in @ViewBag.newCats) {
+                   <p>@item.CategoryName</p>
+        }
+    
+<form asp-controller="Home" asp-action="AddCatToProd" method="POST">
+    <select asp-for="CategoryId"> 
+       @{
+        foreach(var item in ViewBag.Categories) {
+           bool include = false;
+           foreach(var product in ViewBag.includedCategories) {
+               if(item.CategoryName == product.CategoryName) {
+                   include = true;
+               }
+           }
+           if (include != true) {
+               <option value="@item.CategoryId"> @item.CategoryName </option>
+           } 
+        } 
+       }
+        
+        
+    </select>
+    <input type="hidden" asp-for="ProductId" value="@ViewBag.prodinfo.ProductId">
+    <input type="submit" value="SUBMIT" >
+</form>
+
+
+
+    <p> <button> <a href= "/Category"> View all Categories </a> </button> </p>
+    <p> <button> <a href= "/"> Go to Homepage  </a> </button> </p>
+
+
+<h1>Here are the Categories for the Product</h1>
+
+@foreach (var assn in @ViewBag.prodinfo.Association)
+{
+    <p>@assn.Category.CategoryName</p>
+}

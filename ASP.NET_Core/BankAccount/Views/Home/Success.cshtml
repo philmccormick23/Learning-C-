@@ -1,0 +1,11 @@
+<h1>Success!!!</h1>
+<h2>Welcome, @ViewBag.User.FirstName</h2>
+<a href="/">Home</a>
+<a href="/login">Login</a>
+<a href="/Logout">Sign Out</a>
+
+
+@if (ViewBag.message != null)
+{
+  <p>@ViewBag.message</p>
+}

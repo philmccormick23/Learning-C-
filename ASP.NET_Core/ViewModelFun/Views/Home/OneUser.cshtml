@@ -1,0 +1,17 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User</title>
+</head>
+<body>
+    @using ViewModelFun.Models
+    @model User
+    <div class="row">
+        <div class="col-md-6 offset-3 text-center">
+            <h1 class="text-center">@ViewData["Title"]</h1>
+            <p class="text-center">@Model.FirstName</p>
+            <p class="text-center">@Model.LastName</p>
+        </div>
+    </div>
+</body>

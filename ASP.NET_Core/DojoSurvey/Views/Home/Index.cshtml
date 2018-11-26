@@ -1,0 +1,27 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Survey Form</h1>
+    <form action='/result' method='post'>
+        Your Name: <input type='text' name='Name'>
+        Dojo Location: 
+            <select name="Location">
+                <option value="chicago">Chicago</option>
+                <option value="losangeles">Los Angeles</option>
+                <option value="sanfrancisco">San Francisco</option>
+            </select>
+        Favorite Language: 
+            <select name="Language">
+                <option value="python">Python</option>
+                <option value="c#">C#</option>
+                <option value="javascript">javascript</option>
+            </select>
+        Comment: <input type='text' name='Comment'>
+        <input type='submit' value='create user'>
+    </form>
+    
+</body>

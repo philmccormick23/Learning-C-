@@ -1,0 +1,11 @@
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/bin/Debug/netcoreapp2.1/Basic13.deps.json
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/bin/Debug/netcoreapp2.1/Basic13.runtimeconfig.json
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/bin/Debug/netcoreapp2.1/Basic13.runtimeconfig.dev.json
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/bin/Debug/netcoreapp2.1/Basic13.dll
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/bin/Debug/netcoreapp2.1/Basic13.pdb
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/obj/Debug/netcoreapp2.1/Basic13.csprojAssemblyReference.cache
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/obj/Debug/netcoreapp2.1/Basic13.csproj.CoreCompileInputs.cache
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/obj/Debug/netcoreapp2.1/Basic13.AssemblyInfoInputs.cache
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/obj/Debug/netcoreapp2.1/Basic13.AssemblyInfo.cs
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/obj/Debug/netcoreapp2.1/Basic13.dll
+/Users/phillipmccormick/Documents/CodingDojo/C#/Basic13/obj/Debug/netcoreapp2.1/Basic13.pdb

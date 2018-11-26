@@ -1,0 +1,35 @@
+<h1>Edit Recipe</h1>
+
+@using CRUDelicious.Models
+@model Dishes
+    <form asp-action="EditRecipe" asp-controller="Home" method="POST">
+            <label asp-for="Chef">Chefs Name</label>
+            <input type="text" class="form-control" asp-for="Chef" value="@ViewBag.OneDish.Chef">
+            <span asp-validation-for="Chef"></span>
+
+            <label asp-for="Name">Name of Dish</label>
+            <input type="text" class="form-control" asp-for="Name" value="@ViewBag.OneDish.Name">
+            <span asp-validation-for="Name"></span>
+
+            <label asp-for="Calories"># of Calories</label>
+            <input type="text" class="form-control" asp-for="Calories" value="@ViewBag.OneDish.Calories">
+            <span asp-validation-for="Calories"></span>
+
+            <label asp-for="Tastiness">Tastiness</label>
+            <select class="form-control" asp-for="Tastiness" aria-placeholder="@ViewBag.OneDish.Tastiness">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <span asp-validation-for="Tastiness"></span>
+
+            <label asp-for="Description">Description</label>
+            <input type="text" class="form-control" asp-for="Description" value="@ViewBag.OneDish.Description">
+            <span asp-validation-for="Description"></span>
+            <br>
+            <button type="submit" class="btn btn-primary float-right btn-sm">Update dish!</button>
+        </div>
+
+    </form>

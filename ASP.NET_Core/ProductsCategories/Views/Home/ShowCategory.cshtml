@@ -1,0 +1,35 @@
+@using ProductsCategories.Models
+@model Association
+<style>
+    h1 {
+        color:red;
+    }
+</style>
+
+<h1> Category Page for @ViewBag.catinfo.CategoryName </h1>
+<p>Name: @ViewBag.catinfo.CategoryName</p>
+
+<h3>Add a Product to this Category</h3>
+<form asp-controller="Home" asp-action="AddProductToCategory" method="POST">
+    <input type="hidden" asp-for="CategoryId" value="@ViewBag.catinfo.CategoryId">
+    <select asp-for="ProductId"> 
+        @{
+            for(var i=0; i<ViewBag.Products.Count; i++)
+            {
+                <option value="@ViewBag.Products[i].ProductId"> @ViewBag.Products[i].ProductName </option> 
+            }
+        }
+        
+    </select>
+    <input type="submit" value="SUBMIT" ></input>
+</form>
+
+    <p> <button> <a href= "/category"> View all Categories </a> </button> </p>
+    <p> <button> <a href= "/"> Homepage  </a> </button> </p>
+
+    <h3>Here are the Categories for the Product</h3>
+
+@foreach (var assn in @ViewBag.catinfo.Association)
+{
+    <p>@assn.Product.ProductName</p>
+}

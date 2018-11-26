@@ -1,0 +1,10 @@
+<a href='/'>Home</a>
+<h1>Here are the awesome quotes!</h1>
+@foreach(var user in ViewBag.AllUsers)
+{
+    <div class="quote">
+        <h2><b>@user["Quote"]</b></h2>
+        <h2><i>-@user["Name"] at @user["Created_at"]</i></h2>
+        <hr>
+    </div>
+}

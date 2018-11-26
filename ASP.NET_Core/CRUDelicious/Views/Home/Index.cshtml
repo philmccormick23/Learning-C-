@@ -1,0 +1,12 @@
+<h1>Welcome to CRUDelicious</h1>
+    
+<a href="new">Add a dish!</a>
+
+<h3>Check out some recent dishes!</h3>
+@for (int i = @ViewBag.AllRecipes.Count-1; i >= 0; i--)
+        {
+            <h6> <a href="@ViewBag.AllRecipes[i].id">@ViewBag.AllRecipes[i].Name</a> by @ViewBag.AllRecipes[i].Chef</h6>
+            <br>
+        }
+
+    

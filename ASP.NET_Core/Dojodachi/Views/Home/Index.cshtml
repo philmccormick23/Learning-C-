@@ -1,0 +1,26 @@
+<body>
+    <p>Fullness: @ViewBag.fullness</p>
+    <p>Happiness: @ViewBag.happiness</p>
+    <p>Energy: @ViewBag.energy</p>
+    <p>Meals: @ViewBag.meals</p>
+    <br><br>
+    <p>Message: @ViewBag.message</p>
+    <p>Status: @ViewBag.status</p>
+    <p>Alive: @ViewBag.alive</p>
+    <br><br>
+    <form action="feed" method="GET">
+        <button type="submit">Feed</button>
+   </form>
+    <form action="play" method="GET">
+        <button type= "submit">Play</button>
+    </form>
+    <form action="work" method="GET">
+        <button type= "submit">Work</button>
+    </form>
+    <form action="sleep" method="GET">
+        <button type= "submit">Sleep</button>
+    </form>
+    <form action="clear" method="GET">
+        <button>Clear</button>
+    </form>
+</body>

@@ -1,0 +1,54 @@
+<style>
+    
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 15px;
+        }
+        button{
+            background-color: teal;
+            padding: 10px;
+        }
+    
+</style>
+
+
+ <body> 
+<h1>Coding Dojo Wall</h1>
+<h2>Welcome, @ViewBag.User.FirstName</h2>
+<a href="/">Home</a>
+<a href="/login">Login</a>
+<a href="/Logout">Sign Out</a>
+
+
+@model TheWall.Models.Message
+
+<form asp-controller="Home" asp-action="postamessage" method="POST">
+    <legend>Post a message: </legend>
+    <textarea asp-for="MessageText"></textarea>
+    <button>Post a message : </button>
+</form>
+
+@foreach (var x in @ViewBag.AllMessages)
+{
+    <dt>@x.User.FirstName @x.User.LastName - @x.CreatedAt.ToString("MMMM d yyyy")</dt>
+    <dd>@x.MessageText</dd>
+    @foreach (var a in x.Comments)
+    {
+      <h5>@a.User.FirstName @a.User.LastName - @a.CreatedAt.ToString("MMM d yyyy")</h5>
+      <h6>@a.CommentText</h6>
+    }
+    <form asp-controller="Home" asp-action="postacomment" method="POST">
+      <fieldset>
+        <legend>Post a comment</legend>
+        <textarea name="CommentText"></textarea>
+        <input type="hidden" name="MessageId" value="@x.MessageId"/>
+        <button>Post a comment</button>
+      </fieldset>
+    </form>
+
+
+}
+
+</body>
+
+

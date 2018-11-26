@@ -1,0 +1,15 @@
+<a href="/">Home</a>
+
+        <h1>@ViewBag.AllRecipes.Name</h1>
+
+        <h3>Made by: @ViewBag.AllRecipes.Chef</h3>
+
+        <h3>@ViewBag.AllRecipes.Description</h3>
+        
+        <h4>Calories: @ViewBag.AllRecipes.Calories</h4>
+
+        <h4>Tastiness: @ViewBag.AllRecipes.Tastiness</h4>
+
+<a href="@ViewBag.ID/delete"> Delete </a> 
+            
+<a href="edit/@ViewBag.ID">Edit</a>

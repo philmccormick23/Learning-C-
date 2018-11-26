@@ -1,0 +1,42 @@
+
+<body>
+    <h1>Survey Form</h1>
+
+    @using DojoSurveyValidation.Models
+    @model FormData
+    <form asp-action="Result" asp-controller="Home" method="post">
+
+        <label asp-for="Name"></label>
+        <input asp-for="Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <br> 
+
+       <label asp-for="Location"></label>
+        <select asp-for="Location">
+                <option value="">None</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="San Francisco">San Francisco</option>
+        </select>
+        <span asp-validation-for="Location" class="text-danger"></span>
+
+        <br>
+        <label asp-for="Language"></label>
+        <select asp-for="Language"> 
+                <option value="">None</option>
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+                <option value="JavaScript">javascript</option>
+        </select>
+        <span asp-validation-for="Language" class="text-danger"></span>
+        <br>
+
+        <label asp-for="Comment"></label>
+        <textarea asp-for="Comment" rows="6"></textarea>
+        <span asp-validation-for="Comment" class="text-danger"></span>
+        <br>
+        
+        <input type='submit' value='create user'>
+    </form>
+    
+</body>

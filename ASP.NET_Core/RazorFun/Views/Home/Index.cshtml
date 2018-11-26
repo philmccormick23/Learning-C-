@@ -1,0 +1,16 @@
+<h1>Here are some delicious foods!</h1>
+
+@{
+        var FoodList = new List<string>{
+                                "Apple Pie",
+                                "Burritos",
+                                "Clams Casino",
+                                "Donuts"
+                            };
+        
+        foreach(var word in FoodList)
+        {
+            // We can render HTML from within C# code!
+            <p>@word</p>
+        }
+    }
